@@ -1,0 +1,106 @@
+
+/* Basic styles */
+body {background-image: linear-gradient(to top left, #0bf171 20%, blue);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    margin: 0;
+}
+
+
+.container {    background-color: #fdfdfdb5;
+    border-radius: 8px;
+    padding: 12px;
+    display: block;
+    box-shadow: 1px;
+    text-align: center;
+}
+h1{
+    font-weight: 800;
+    color: #181881;
+}
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.time-box {color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #032493db;
+    border: 1px solid #7a7575;
+    border-radius: 8px;
+}
+
+
+span {
+    font-size: 2rem;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+input[type="datetime-local"] {
+    border: solid blue 1px;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+#start-btn{
+    color: white;
+    background-color: green;
+}
+#stop-btn{
+    color: white;
+    background-color: red;
+}
+
+/* Completion message */
+.completion-message {
+    font-size: 2rem;
+    color: green;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Completion animation */
+.complete-animation {
+    animation: countdown-complete 1s ease-in-out;
+}
+
+@keyframes countdown-complete {
+    0%, 100% {
+        transform: scale(1);
+        background-color: white;
+    }
+    50% {
+        transform: scale(1.1);
+        background-color: yellow;
+    }
+}
