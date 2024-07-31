@@ -8,7 +8,9 @@ A simple web-based countdown timer that allows users to set a timer for a specif
 - Reset the timer at any point
 
 ## Screenshots
-Screenshot.png
+
+
+![countdown UI](Screenshot.png)
 
 ## Technologies Used
 - HTML
