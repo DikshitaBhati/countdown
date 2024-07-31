@@ -7,8 +7,8 @@ A simple web-based countdown timer that allows users to set a timer for a specif
 - Audio alert when the timer reaches zero
 - Reset the timer at any point
 
-Screenshots
-screenshot.png
+## Screenshots
+Screenshot.png
 
 ## Technologies Used
 - HTML
