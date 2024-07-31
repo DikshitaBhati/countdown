@@ -1,4 +1,4 @@
-Countdown Timer
+#Countdown Timer
 A simple web-based countdown timer that allows users to set a timer for a specified duration and provides a visual and audio alert when the time is up.
 
 Features
