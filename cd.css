@@ -1,54 +1,65 @@
-
 /* Basic styles */
-body {background-image: linear-gradient(to top left, #0bf171 20%, blue);
+body {
+    background-image: linear-gradient(to top left, #0bf171 20%, blue);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
     margin: 0;
+    padding: 0;
 }
 
-
-.container {    background-color: #fdfdfdb5;
+.container {
+    background-color: rgba(253, 253, 253, 0.71);
     border-radius: 8px;
-    padding: 12px;
-    display: block;
-    box-shadow: 1px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 90%;
+    max-width: 600px;
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
 }
-h1{
+
+h1 {
     font-weight: 800;
     color: #181881;
-}
-.timer {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
 }
 
-.time-box {color: white;
+.timer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 22%;
     padding: 10px;
     background-color: #032493db;
     border: 1px solid #7a7575;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-
-span {
-    font-size: 2rem;
+.time-box span {
+    font-size: 1.5rem;
 }
 
 .input-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 label {
@@ -61,6 +72,10 @@ input[type="datetime-local"] {
     padding: 10px;
     font-size: 1rem;
     margin-bottom: 10px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 button {
@@ -68,14 +83,27 @@ button {
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
-#start-btn{
+
+#start-btn {
     color: white;
     background-color: green;
 }
-#stop-btn{
+
+#start-btn:hover {
+    background-color: darkgreen;
+}
+
+#stop-btn {
     color: white;
     background-color: red;
+}
+
+#stop-btn:hover {
+    background-color: darkred;
 }
 
 /* Completion message */
@@ -89,18 +117,46 @@ button {
     display: none;
 }
 
-/* Completion animation */
-.complete-animation {
-    animation: countdown-complete 1s ease-in-out;
-}
-
-@keyframes countdown-complete {
-    0%, 100% {
-        transform: scale(1);
-        background-color: white;
+/* Responsive Styles */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 20px;
+        height: auto;
     }
-    50% {
-        transform: scale(1.1);
-        background-color: yellow;
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .timer {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .time-box {
+        width: 22%; /* Keeps all boxes visible on mobile */
+        padding: 8px;
+        margin: 2px;
+    }
+
+    .time-box span {
+        font-size: 1.2rem;
+    }
+
+    .input-container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    input[type="datetime-local"] {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.2rem;
     }
 }
